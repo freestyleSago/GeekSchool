@@ -1,0 +1,97 @@
+﻿<Page
+    x:Class="GeekSchool.Pages.PersonalCenterPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GeekSchool.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converter="using:Sago.Framework.Universal.Library.Common.Converter"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Themes/PersonalCenterStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <converter:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="windowSize">
+                <VisualState x:Name="wideView">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="{StaticResource MinWindowWidthOfWide}"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!--头像-->
+                        <Setter Target="EllipseHeadPortrait.Height" Value="140"/>
+                        <Setter Target="EllipseHeadPortrait.Width" Value="140"/>
+                        <!--昵称-->
+                        <Setter Target="TextBlockNickName.(RelativePanel.RightOf)" Value="EllipseHeadPortrait"/>
+                        <Setter Target="TextBlockNickName.(RelativePanel.AlignVerticalCenterWith)" Value="EllipseHeadPortrait"/>
+                        <!--个性签名-->
+                        <Setter Target="TextBlockSignature.(RelativePanel.RightOf)" Value="EllipseHeadPortrait"/>
+                        <!--VIP-->
+                        <Setter Target="StackPanelVIP.(RelativePanel.RightOf)" Value="TextBlockNickName"/>
+                        <Setter Target="StackPanelVIP.(RelativePanel.AlignVerticalCenterWith)" Value="TextBlockNickName"/>
+                        <Setter Target="StackPanelVIP.Margin" Value="10,10,0,0"/>
+                        <!--学习记录-->
+                        <!--<Setter Target="ListViewLearningRecord.ItemsPanel" Value="{StaticResource ItemsWrapGrid}"/>-->
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="narrowView">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="{StaticResource MinWindowWidthOfNarrow}"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!--头像-->
+                        <Setter Target="EllipseHeadPortrait.Height" Value="80"/>
+                        <Setter Target="EllipseHeadPortrait.Width" Value="80"/>
+                        <Setter Target="TextBlockNickName.(RelativePanel.Below)" Value="EllipseHeadPortrait"/>
+                        <!--昵称-->
+                        <Setter Target="TextBlockNickName.(RelativePanel.AlignHorizontalCenterWithPanel)" Value="True"/>
+                        <!--个性签名-->
+                        <Setter Target="TextBlockSignature.(RelativePanel.AlignHorizontalCenterWith)" Value="EllipseHeadPortrait"/>
+                        <!--VIP-->
+                        <Setter Target="StackPanelVIP.(RelativePanel.Below)" Value="TextBlockSignature"/>
+                        <Setter Target="StackPanelVIP.(RelativePanel.AlignHorizontalCenterWith)" Value="TextBlockNickName"/>
+                        <!--学习记录-->
+                        <!--<Setter Target="GridViewLearningRecord.ItemsPanel" Value="{StaticResource ItemsStackPanel}"/>-->
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+
+        <!--个人资料部分-->
+        <RelativePanel VerticalAlignment="Top">
+            <Ellipse x:Name="EllipseHeadPortrait" Style="{StaticResource EllipseHeadPortraitStyles}"/>
+            <TextBlock x:Name="TextBlockNickName" Style="{StaticResource TextBlockNickNameStyles}" Text="{Binding User.NickName}"/>
+            <StackPanel x:Name="StackPanelVIP" Orientation="Horizontal" Margin="0,5,0,0">
+                <Grid Visibility="{Binding User.IsVIP,Converter={StaticResource BoolToVisibilityConverter}}">
+                    <Rectangle Style="{StaticResource RectangleVIP}">
+                    </Rectangle>
+                    <TextBlock Style="{StaticResource TextBlockVIP}"/>
+                </Grid>
+                <TextBlock Text="{Binding User.VIPStatusString}" Style="{StaticResource TextBlockVIPStatus}"/>
+            </StackPanel>
+            <TextBlock x:Name="TextBlockSignature" Style="{StaticResource TextBlockSignatureStyles}" Text="{Binding User.Signature}" RelativePanel.Below="TextBlockNickName"/>
+        </RelativePanel>
+
+        <!--学习历史部分-->
+        <Pivot Grid.Row="1" Style="{StaticResource Pivot}">
+            <Pivot.Items>
+                <PivotItem x:Name="PivotItemLearningRecord" x:Uid="PersonalCenterPage_PivotItem_LearningRecord" Style="{StaticResource PivotItem}"/>
+                <PivotItem x:Name="PivotItemFavorites" x:Uid="PersonalCenterPage_PivotItem_Favorites" Style="{StaticResource PivotItem}"/>
+            </Pivot.Items>
+        </Pivot>
+    </Grid>
+</Page>

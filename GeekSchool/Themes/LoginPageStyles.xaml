@@ -1,0 +1,27 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GeekSchool.Themes"
+    xmlns:toggleButton="using:Sago.Framework.Universal.TemplateControls.ToggleButton">
+
+    <!--账号框-->
+    <Style x:Key="TextBoxStyles" TargetType="TextBox">
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="FontSize" Value="30"/>
+    </Style>
+
+    <!--密码框-->
+    <Style x:Key="PasswordBoxStyles" TargetType="PasswordBox">
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="FontSize" Value="30"/>
+    </Style>
+
+    <!--登录按钮-->
+    <Style x:Key="ButtonLoginInStyles" TargetType="toggleButton:ToggleButton">
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+    </Style>
+</ResourceDictionary>

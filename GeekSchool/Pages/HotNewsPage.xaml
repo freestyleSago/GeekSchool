@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="GeekSchool.Pages.HotNewsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GeekSchool.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:carouselControl="using:Sago.Framework.Universal.TemplateControls.CarouselControl"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <carouselControl:CarouselControl x:Name="CarouselControl" Grid.Row="0">
+            <carouselControl:CarouselControl.ItemTemplate>
+                <DataTemplate>
+                    <Image Stretch="Fill" Source="{Binding ImageSource}"/>
+                </DataTemplate>
+            </carouselControl:CarouselControl.ItemTemplate>
+        </carouselControl:CarouselControl>
+    </Grid>
+</Page>

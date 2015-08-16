@@ -1,0 +1,59 @@
+﻿<Page
+    x:Class="GeekSchool.Pages.TestPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GeekSchool.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:GeekSchool.TemplateControls"
+    xmlns:frameworkControls="using:Sago.Framework.Universal.TemplateControls.MediaPlayer"
+    xmlns:toggleButton="using:Sago.Framework.Universal.TemplateControls.ToggleButton"
+    mc:Ignorable="d">
+    <Page.Resources>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <!--<toggleButton:ToggleButton Click="ToggleButton_Click">
+            <toggleButton:ToggleButton.VisualStateOne>
+                <Storyboard>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="TextBlock" Storyboard.TargetProperty="Text">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="第一次点击"/>
+                    </ObjectAnimationUsingKeyFrames>
+                </Storyboard>
+            </toggleButton:ToggleButton.VisualStateOne>
+            <toggleButton:ToggleButton.VisualStateTwo>
+                <Storyboard>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="TextBlock" Storyboard.TargetProperty="Text">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="第二次点击"/>
+                    </ObjectAnimationUsingKeyFrames>
+                </Storyboard>
+            </toggleButton:ToggleButton.VisualStateTwo>
+            <toggleButton:ToggleButton.Content>
+                <TextBlock x:Name="TextBlock" Text="没有点击时"/>
+            </toggleButton:ToggleButton.Content>
+        </toggleButton:ToggleButton>-->
+        <!--<frameworkControls:MediaPlayerControl Background="White" AutoPlay="False" Source="/Assets/Medias/UK_Gateshead_ShutterstockRF_6899947_1080_HD_ZH-CN.mp4"/>-->
+
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <ContentControl x:Name="MediaElementContainer" 
+                            HorizontalContentAlignment="Center" 
+                            VerticalContentAlignment="Center" 
+                            Height="400" Grid.Row="0" >
+            <MediaElement Name="MediaElement"
+                          Source="/Assets/Medias/UK_Gateshead_ShutterstockRF_6899947_1080_HD_ZH-CN.mp4"
+                              AutoPlay="False" />
+        </ContentControl>
+
+        <StackPanel Grid.Row="1" Background="Red" HorizontalAlignment="Center" x:Name="TransportControlsPanel">
+            <StackPanel Orientation="Horizontal">
+                <Button Content="FullScreen" Click="Button_Click"/>
+            </StackPanel>
+        </StackPanel>-->
+        <MediaElement Name="MediaElement"
+                          Source="/Assets/Medias/UK_Gateshead_ShutterstockRF_6899947_1080_HD_ZH-CN.mp4"
+                              AutoPlay="False" AreTransportControlsEnabled="True"/>
+    </Grid>
+</Page>

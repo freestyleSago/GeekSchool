@@ -1,0 +1,57 @@
+﻿<Page
+    x:Class="GeekSchool.Pages.LoginPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GeekSchool.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toggleButton="using:Sago.Framework.Universal.TemplateControls.ToggleButton"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Themes/LoginPageStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel VerticalAlignment="Top" x:Name="MainStackPanel">
+
+            <TextBox x:Uid="LoginPage_TextBox_Account" Style="{StaticResource TextBoxStyles}" x:Name="TextBoxAccount"/>
+
+            <PasswordBox x:Uid="LoginPage_PasswordBox_Password" Style="{StaticResource PasswordBoxStyles}" x:Name="PasswordBoxPassword"/>
+
+            <toggleButton:ToggleButton Style="{StaticResource ButtonLoginInStyles}" x:Name="ToggleButtonLoginIn" Click="ToggleButtonLoginIn_Click">
+                <toggleButton:ToggleButton.Content>
+                    <TextBlock x:Name="TextBlockLoginIn" Text="&#xE970;" FontFamily="Segoe MDL2 Assets">
+                        <TextBlock.RenderTransform>
+                            <TranslateTransform x:Name="TextBlockLoginInTranslateTransform" X="0"/>
+                        </TextBlock.RenderTransform>
+                    </TextBlock>
+                </toggleButton:ToggleButton.Content>
+                
+                <!--向左平移-->
+                <toggleButton:ToggleButton.VisualStateOne>
+                    <Storyboard>
+                        <DoubleAnimation Storyboard.TargetName="TextBlockLoginInTranslateTransform" Storyboard.TargetProperty="X" From="0" To="0" Duration="0:0:3"/>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="TextBlockLoginIn" Storyboard.TargetProperty="Text">
+                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="&#xE96F;"/>
+                            <DiscreteObjectKeyFrame KeyTime="0:0:3" Value="&#xE970;"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </toggleButton:ToggleButton.VisualStateOne>
+
+                <!--向右平移-->
+                <toggleButton:ToggleButton.VisualStateTwo>
+                    <Storyboard>
+                        <DoubleAnimation Storyboard.TargetName="TextBlockLoginInTranslateTransform" Storyboard.TargetProperty="X" From="0" To="{Binding HorizontalOffsetX}" Duration="0:0:3"/>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="TextBlockLoginIn" Storyboard.TargetProperty="Text" BeginTime="0:0:3">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="&#xE96F;"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </toggleButton:ToggleButton.VisualStateTwo>
+            </toggleButton:ToggleButton>
+        </StackPanel>
+    </Grid>
+</Page>
