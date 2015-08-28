@@ -147,7 +147,7 @@
   <data name="LoginPage_PasswordBox_Password.PlaceholderText" xml:space="preserve">
     <value>密码</value>
   </data>
-  <data name="PersonalCenterEntity_UserEntity_VIPStatusString_Expire" xml:space="preserve">
+  <data name="UserEntity_VIPStatusString_Expire" xml:space="preserve">
     <value>会员已经过期</value>
   </data>
   <data name="PersonalCenterPage_PivotItem_LearningRecord.Header" xml:space="preserve">
@@ -164,5 +164,26 @@
   </data>
   <data name="TextBlock_Back.Text" xml:space="preserve">
     <value>返回上一页</value>
+  </data>
+  <data name="CoursePeriodsPage_PivotItem_Lessons.Header" xml:space="preserve">
+    <value>课时列表</value>
+  </data>
+  <data name="CoursePeriodsPage_PivotItem_LessonDetail.Header" xml:space="preserve">
+    <value>详细信息</value>
+  </data>
+  <data name="CoursePeriodsPage_AppBarButton_SelectAll.Label" xml:space="preserve">
+    <value>选择</value>
+  </data>
+  <data name="CoursePeriodsPage_AppBarButton_Cancel.Label" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="CoursePeriodsPage_AppBarButton_Download.Label" xml:space="preserve">
+    <value>下载</value>
+  </data>
+  <data name="CoursePeriodEntity_CacheStatus_Cached" xml:space="preserve">
+    <value>已缓存</value>
+  </data>
+  <data name="CoursePeriodEntity_CacheStatus_UnCached" xml:space="preserve">
+    <value>未缓存</value>
   </data>
 </root>

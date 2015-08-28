@@ -125,11 +125,12 @@
     <Compile Include="NavigationButtonEntity.cs" />
     <Compile Include="PersonalCenterEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingEntity.cs" />
     <Compile Include="UserEntity.cs" />
     <Content Include="Properties\GeekSchool.Entity.rd.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\Sago.VisualStudio.com\Windows 10\Framework\Framework\Sago.Framework.Universal.Library.Common\Sago.Framework.Universal.Library.Common.csproj">
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Sago.Framework.Universal.Library.Common\Sago.Framework.Universal.Library.Common.csproj">
       <Project>{39d7511a-cc82-40e5-8d11-0e69a5af59b0}</Project>
       <Name>Sago.Framework.Universal.Library.Common</Name>
     </ProjectReference>

@@ -23,8 +23,8 @@ namespace GeekSchool
 
             this.DataContext = this;
 
-            LoginService.LoginIn += userEntity => this.IsLogin = true;
-            LoginService.LoginOut += () => this.IsLogin = false;
+            LoginService.LoginIn += (sender, e) => this.IsLogin = e.IsLoginIn;
+            LoginService.LoginOut += (sender, e) => this.IsLogin = e.IsLoginIn;
             LoginService.CheckLoginStatus();
         }
 

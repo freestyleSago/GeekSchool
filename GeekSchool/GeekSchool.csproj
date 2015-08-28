@@ -105,8 +105,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Helper\LessonHelper.cs" />
     <Compile Include="Helper\TemplateSelector\KnowledgeSystemDiagramDataTemplateSelector.cs" />
     <Compile Include="Helper\TemplateSelector\KnowledgeSystemDiagramTimeLineDetailViewDataTemplateSelector.cs" />
+    <Compile Include="Helper\TemplateSelector\MinWindowWidhtDataTemplateSelector.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -263,19 +265,23 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\Sago.VisualStudio.com\Windows 10\Framework\Framework\Sago.Framework.Universal.Library.Common\Sago.Framework.Universal.Library.Common.csproj">
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Sago.Framework.Universal.Library.Common\Sago.Framework.Universal.Library.Common.csproj">
       <Project>{39d7511a-cc82-40e5-8d11-0e69a5af59b0}</Project>
       <Name>Sago.Framework.Universal.Library.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\..\Sago.VisualStudio.com\Windows 10\Framework\Framework\Sago.Framework.Universal.TemplateControls.CarouselControl\Sago.Framework.Universal.TemplateControls.CarouselControl.csproj">
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Sago.Framework.Universal.TemplateControls.CarouselControl\Sago.Framework.Universal.TemplateControls.CarouselControl.csproj">
       <Project>{23274c99-eac8-4ec0-a2f0-3f1253239df4}</Project>
       <Name>Sago.Framework.Universal.TemplateControls.CarouselControl</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\..\Sago.VisualStudio.com\Windows 10\Framework\Framework\Sago.Framework.Universal.TemplateControls.MediaPlayer\Sago.Framework.Universal.TemplateControls.MediaPlayer.csproj">
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Sago.Framework.Universal.TemplateControls.EdgeTappedListView\Sago.Framework.Universal.TemplateControls.EdgeTappedListView.csproj">
+      <Project>{37eee4c8-10b2-4952-9b5a-b40db7d27719}</Project>
+      <Name>Sago.Framework.Universal.TemplateControls.EdgeTappedListView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Sago.Framework.Universal.TemplateControls.MediaPlayer\Sago.Framework.Universal.TemplateControls.MediaPlayer.csproj">
       <Project>{c041b2ae-6078-4e3c-8cfe-0bc485ae269e}</Project>
       <Name>Sago.Framework.Universal.TemplateControls.MediaPlayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\..\Sago.VisualStudio.com\Windows 10\Framework\Framework\Sago.Framework.Universal.TemplateControls.ToggleButton\Sago.Framework.Universal.TemplateControls.ToggleButton.csproj">
+    <ProjectReference Include="..\..\..\..\Framework\Framework\Sago.Framework.Universal.TemplateControls.ToggleButton\Sago.Framework.Universal.TemplateControls.ToggleButton.csproj">
       <Project>{82fc345a-0e2d-4153-81dd-6af9bc6e9331}</Project>
       <Name>Sago.Framework.Universal.TemplateControls.ToggleButton</Name>
     </ProjectReference>

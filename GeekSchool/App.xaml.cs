@@ -1,4 +1,5 @@
-﻿using Sago.Framework.Universal.Library.Common.Utility;
+﻿using GeekSchool.Entity;
+using Sago.Framework.Universal.Library.Common.Utility;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -37,6 +38,8 @@ namespace GeekSchool
         }
 
         public static event Action OnHardwareButtonsBackPressed;
+
+        public static SettingEntity Settings = new SettingEntity();
 
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points

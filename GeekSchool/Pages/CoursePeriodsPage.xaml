@@ -5,7 +5,8 @@
     xmlns:local="using:GeekSchool.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:mediaPlayerControl ="using:Sago.Framework.Universal.TemplateControls.MediaPlayer"
+    xmlns:leftEdgeListView ="using:Sago.Framework.Universal.TemplateControls.EdgeTappedListView"
+    xmlns:converter="using:Sago.Framework.Universal.Library.Common.Converter"
     mc:Ignorable="d">
 
     <Page.Resources>
@@ -13,9 +14,11 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Themes/CoursePeriodsPageStyles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+
+            <converter:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
         </ResourceDictionary>
     </Page.Resources>
-    
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="windowSize">
@@ -42,8 +45,36 @@
             <RowDefinition Height="400" x:Name="RowMediaPlayControl"/>
             <RowDefinition Height="4*"/>
         </Grid.RowDefinitions>
-        <mediaPlayerControl:MediaPlayerControl x:Name="MediaPlayerControl" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <MediaElement x:Name="MediaPlayerControl" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" AutoPlay="False" AreTransportControlsEnabled="True"  IsFullWindow="{Binding IsFullScreen,Mode=TwoWay}" CurrentStateChanged="MediaPlayerControl_CurrentStateChanged">
+            <MediaElement.TransportControls>
+                <MediaTransportControls IsFastForwardButtonVisible="False" 
+                                                        IsFastForwardEnabled="False" 
+                                                        IsFastRewindButtonVisible="False" 
+                                                        IsFastRewindEnabled="False"
+                                                        IsZoomButtonVisible="False"
+                                                        IsZoomEnabled="False"/>
+            </MediaElement.TransportControls>
+        </MediaElement>
 
-        <ListView x:Name="ListViewCoursePeriods" Grid.Row="1" SelectionMode="Single" SelectionChanged="ListViewCoursePeriods_SelectionChanged" Style="{StaticResource ListViewCoursePeriods}"/>
+        <Pivot Grid.Row="1">
+            <Pivot.Items>
+                <PivotItem x:Uid="CoursePeriodsPage_PivotItem_Lessons" Style="{StaticResource PivotItemWithNoMargin}">
+                    <leftEdgeListView:EdgeTappedListView x:Name="ListViewCoursePeriods"  SelectionMode="Single" SelectionChanged="ListViewCoursePeriods_SelectionChanged" Style="{StaticResource ListViewCoursePeriods}" IsLeftEdgeTapEnabled="True"/>
+                </PivotItem>
+                <PivotItem x:Uid="CoursePeriodsPage_PivotItem_LessonDetail" Style="{StaticResource PivotItemWithNoMargin}">
+
+                </PivotItem>
+            </Pivot.Items>
+        </Pivot>
     </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar x:Name="BottomAppBar" ClosedDisplayMode="Compact" Visibility="{Binding IsFullScreen,Converter={StaticResource BoolToVisibilityConverter},ConverterParameter=false}">
+            <CommandBar.PrimaryCommands>
+                <AppBarButton x:Uid="CoursePeriodsPage_AppBarButton_SelectAll" x:Name="AppBarButtonSelectAll" Icon="List" HorizontalAlignment="Right"  Visibility="{Binding IsMultipleSelectionModeOfLessonsListView,Converter={StaticResource BoolToVisibilityConverter},ConverterParameter=false}" Click="AppBarButtonSelectAll_Click" />
+                <AppBarButton x:Uid="CoursePeriodsPage_AppBarButton_Cancel" x:Name="AppBarButtonCancel" Icon="Cancel" HorizontalAlignment="Right" Visibility="{Binding IsMultipleSelectionModeOfLessonsListView,Converter={StaticResource BoolToVisibilityConverter}}" Click="AppBarButtonCancel_Click"/>
+                <AppBarButton x:Uid="CoursePeriodsPage_AppBarButton_Download" x:Name="AppBarButtonDownload" Icon="Download" HorizontalAlignment="Right" Visibility="{Binding IsMultipleSelectionModeOfLessonsListView,Converter={StaticResource BoolToVisibilityConverter}}" IsEnabled="{Binding IsDownloadEnable}" Click="AppBarButtonDownload_Click"/>
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
 </Page>

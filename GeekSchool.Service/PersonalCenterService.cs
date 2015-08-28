@@ -1,11 +1,14 @@
 ﻿using GeekSchool.Entity;
 using System;
 using System.Collections.Generic;
+using Windows.Storage;
 
 namespace GeekSchool.Service
 {
     public class PersonalCenterService
     {
+        private SettingEntity _SettingEntity = new SettingEntity();
+
         public PersonalCenterEntity GetPersonalCenterEntity()
         {
             var loginService = new LoginService();
@@ -46,19 +49,23 @@ namespace GeekSchool.Service
                     {
                         new CoursePeriodEntity()
                         {
+                            ID =  new Guid("fb5eca5d-2661-4f3a-a122-024ab72b067e"),
                             Index =1,
                             Title ="数据类型初阶",
                             Description ="本课学习Java中基本的变量类型和变量在堆栈中的分布特点。",
                             Minutes = TimeSpan.FromMinutes(4),
-                            Source = new Uri("ms-appx:///Assets/Medias/UK_Gateshead_ShutterstockRF_6899947_1080_HD_ZH-CN.mp4")
+                            Source = new Uri("http://175.22.6.55/2/cv3.jikexueyuan.com/java/course_hjdj/01/video/c205b_01_h264_sd_960_540.mp4?key=201508201223_4d90251b95d8138d5cf56297b0e9724d")
+                            //Source = new Uri("ms-appx:///Assets/Medias/UK_Gateshead_ShutterstockRF_6899947_1080_HD_ZH-CN.mp4")
                         },
                         new CoursePeriodEntity()
                         {
+                            ID = new Guid( "30718f87-1a76-400d-8cb4-9ceeda0da781"),
                             Index =2,
                             Title ="变量的定义和变量使用的原因",
                             Description ="本课学习变量的定义和变量使用的原因。",
                             Minutes = TimeSpan.FromMinutes(6),
-                            Source = new Uri("ms-appx:///Assets/Medias/AntelopeCanyon_shutterstockRF_4152388_1080_HD_ZH-CN.mp4")
+                            Source = new Uri("http://125.88.147.172/9/cv3.jikexueyuan.com/course/2001-2100/2046/video/5464_b_h264_sd_960_540.mp4?key=201508191252_d28852eba88a76184e7a9dccf649d00f")
+                            //Source = new Uri("ms-appx:///Assets/Medias/AntelopeCanyon_shutterstockRF_4152388_1080_HD_ZH-CN.mp4")
                         },
                         new CoursePeriodEntity()
                         {

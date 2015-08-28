@@ -5,6 +5,17 @@
     xmlns:converters="using:Sago.Framework.Universal.Library.Common.Converter">
 
     <converters:TimeSpanToStringConverter x:Key="TimeSpanToStringConverter"/>
+    <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+
+    <!--课时列表ItemsDataTemplate，宽屏设备-->
+    <DataTemplate x:Key="ListViewCoursePeriodsDataTemplateOfWideView">
+
+    </DataTemplate>
+
+    <!--课时列表ItemsDataTemplate，窄屏设备-->
+    <DataTemplate x:Key="ListViewCoursePeriodsDataTemplateOfNarrowView">
+
+    </DataTemplate>
 
     <Style x:Key="ListViewCoursePeriods" TargetType="ListView">
         <Setter Property="ItemContainerStyle">
@@ -21,8 +32,8 @@
                                 <ListViewItemPresenter
                                         ContentTransitions="{TemplateBinding ContentTransitions}"
                                         SelectionCheckMarkVisualEnabled="True"
-                                        CheckBrush="{ThemeResource SystemControlForegroundBaseMediumHighBrush}"
-                                        CheckBoxBrush="{ThemeResource SystemControlForegroundBaseMediumHighBrush}"
+                                        CheckBrush="{ThemeResource ForegroundColorBrush}"
+                                        CheckBoxBrush="{ThemeResource ForegroundColorBrush}"
                                         DragBackground="{ThemeResource BackgroundColorBrush}"
                                         DragForeground="{ThemeResource ForegroundColorBrush}"
                                         FocusBorderBrush="{ThemeResource ForegroundColorBrush}"
@@ -52,23 +63,30 @@
             <Setter.Value>
                 <DataTemplate>
                     <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <StackPanel Grid.Column="0" Orientation="Horizontal">
-                                <TextBlock Text="{Binding Index}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" TextTrimming="WordEllipsis"/>
-                                <TextBlock Text="{Binding Title}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" TextTrimming="WordEllipsis"/>
-                            </StackPanel>
+                        <Grid Height="50" Margin="10,0,0,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="20"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock x:Name="TextBlockIndex" Text="{Binding Index}" Margin="0,0,0,0" TextTrimming="WordEllipsis" VerticalAlignment="Center" Grid.Column="0"/>
+                                <TextBlock x:Name="TextBlockTitle" Text="{Binding Title}"  Margin="10,0,0,0" TextTrimming="WordEllipsis" VerticalAlignment="Center" Grid.Column="1"/>
+                                <Grid x:Name="GridCached"  Height="20" Width="20" Visibility="{Binding IsCached,Converter={StaticResource BoolToVisibilityConverter},ConverterParameter=true}" Grid.Column="2">
+                                    <Ellipse Fill="Red" Height="15" Width="15" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    <TextBlock x:Name="TextBlockCached" Text="&#xE001;" FontSize="14" Margin="0,0,0,0" Style="{StaticResource IconTextBlockStyles}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Grid>
+                                <TextBlock x:Name="TextBlockMinutes" Text="{Binding Minutes,Converter={StaticResource TimeSpanToStringConverter}}" TextTrimming="WordEllipsis" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Column="3"/>
+                            </Grid>
 
-                            <TextBlock Text="{Binding Minutes,Converter={StaticResource TimeSpanToStringConverter}}" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" TextTrimming="WordEllipsis"/>
+                            <TextBlock x:Name="TextBlockDescription" Text="{Binding Description}"  FontSize="12"  Margin="0,0,0,0" TextTrimming="WordEllipsis" Grid.Row="1" Visibility="{Binding IsDownloading,Converter={StaticResource BoolToVisibilityConverter},ConverterParameter=false}"/>
+                            <ProgressBar x:Name="ProgressBarDownloadProgress"  Grid.Row="1" Maximum="100" Value="{Binding DownloadProgress}" Visibility="{Binding IsDownloading,Converter={StaticResource BoolToVisibilityConverter}}"/>
                         </Grid>
-                        <TextBlock Text="{Binding Description}"  FontSize="12" Grid.Row="1" Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" TextTrimming="WordEllipsis"/>
                     </Grid>
                 </DataTemplate>
             </Setter.Value>

@@ -5,15 +5,24 @@ using Windows.Storage;
 
 namespace GeekSchool.Service
 {
+    public class LoginEventArgs : EventArgs
+    {
+        public bool IsLoginIn { get; set; }
+
+        public UserEntity User { get; set; }
+    }
+
     public class LoginService
     {
         private static LoginService _LoginService = new LoginService();
 
         private const string USERKEY = "USER";
 
-        public static event Action<UserEntity> LoginIn;
+        public delegate void LoginInEventHandler(object sender, LoginEventArgs e);
+        public static event LoginInEventHandler LoginIn;
 
-        public static event Action LoginOut;
+        public delegate void LoginOutEventHandler(object sender, LoginEventArgs e);
+        public static event LoginOutEventHandler LoginOut;
 
         /// <summary>
         /// 用户是否登录
@@ -32,16 +41,16 @@ namespace GeekSchool.Service
             if (userEntity != default(UserEntity))
             {
                 //调用登录状态委托
-                if (LoginService.LoginIn != default(Action<UserEntity>))
+                if (LoginService.LoginIn != default(LoginInEventHandler))
                 {
-                    LoginService.LoginIn(userEntity);
+                    LoginService.LoginIn(null, new LoginEventArgs() { IsLoginIn = true, User = userEntity });
                 }
             }
             else
             {
-                if (LoginService.LoginOut != default(Action))
+                if (LoginService.LoginOut != default(LoginOutEventHandler))
                 {
-                    LoginService.LoginOut();
+                    LoginService.LoginOut(null, new LoginEventArgs() { IsLoginIn = false, User = userEntity });
                 }
             }
         }
@@ -83,9 +92,9 @@ namespace GeekSchool.Service
             }
 
             //调用登录状态委托
-            if (LoginService.LoginIn != default(Action<UserEntity>))
+            if (LoginService.LoginIn != default(LoginInEventHandler))
             {
-                LoginService.LoginIn(user);
+                LoginService.LoginIn(null, new LoginEventArgs() { IsLoginIn = true, User = user });
             }
         }
 
@@ -96,9 +105,9 @@ namespace GeekSchool.Service
             {
                 ApplicationData.Current.LocalSettings.Values.Remove(LoginService.USERKEY);
 
-                if (LoginService.LoginOut != default(Action))
+                if (LoginService.LoginOut != default(LoginOutEventHandler))
                 {
-                    LoginService.LoginOut();
+                    LoginService.LoginOut(null, new LoginEventArgs() { IsLoginIn = false, User = null });
                 }
             }
         }

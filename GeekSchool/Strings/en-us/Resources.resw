@@ -147,7 +147,7 @@
   <data name="LoginPage_PasswordBox_Password.PlaceholderText" xml:space="preserve">
     <value>Password</value>
   </data>
-  <data name="PersonalCenterEntity_UserEntity_VIPStatusString_Expire" xml:space="preserve">
+  <data name="UserEntity_VIPStatusString_Expire" xml:space="preserve">
     <value>Expired</value>
   </data>
   <data name="PersonalCenterPage_PivotItem_LearningRecord.Header" xml:space="preserve">
@@ -164,5 +164,26 @@
   </data>
   <data name="TextBlock_Back.Text" xml:space="preserve">
     <value>Go Back</value>
+  </data>
+  <data name="CoursePeriodsPage_PivotItem_Lessons.Header" xml:space="preserve">
+    <value>Lesson</value>
+  </data>
+  <data name="CoursePeriodsPage_PivotItem_LessonDetail.Header" xml:space="preserve">
+    <value>Detail</value>
+  </data>
+  <data name="CoursePeriodsPage_AppBarButton_SelectAll.Label" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="CoursePeriodsPage_AppBarButton_Cancel.Label" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CoursePeriodsPage_AppBarButton_Download.Label" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="CoursePeriodEntity_CacheStatus_Cached" xml:space="preserve">
+    <value>Cached</value>
+  </data>
+  <data name="CoursePeriodEntity_CacheStatus_UnCached" xml:space="preserve">
+    <value>UnCached</value>
   </data>
 </root>

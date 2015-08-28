@@ -44,9 +44,9 @@ namespace GeekSchool.Entity
                     case 1:
                         return string.Empty;
                     case 2:
-                        return this._ResourceUtility.GetString("PersonalCenterEntity_UserEntity_VIPStatusString_Expire");
+                        return this._ResourceUtility.GetString("UserEntity_VIPStatusString_Expire");
                     default:
-                        return this._ResourceUtility.GetString("PersonalCenterEntity_UserEntity_VIPStatusString_Expire");
+                        return this._ResourceUtility.GetString("UserEntity_VIPStatusString_Expire");
                 }
             }
         }

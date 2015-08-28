@@ -11,13 +11,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekSchool.Service", "GeekS
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TemplateControls", "TemplateControls", "{0F562D33-661F-4CC3-AB4A-6ADC57464FC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sago.Framework.Universal.Library.Common", "..\..\..\..\..\Sago.VisualStudio.com\Windows 10\Framework\Framework\Sago.Framework.Universal.Library.Common\Sago.Framework.Universal.Library.Common.csproj", "{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sago.Framework.Universal.TemplateControls.MediaPlayer", "..\..\..\Framework\Framework\Sago.Framework.Universal.TemplateControls.MediaPlayer\Sago.Framework.Universal.TemplateControls.MediaPlayer.csproj", "{C041B2AE-6078-4E3C-8CFE-0BC485AE269E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sago.Framework.Universal.TemplateControls.CarouselControl", "..\..\..\..\..\Sago.VisualStudio.com\Windows 10\Framework\Framework\Sago.Framework.Universal.TemplateControls.CarouselControl\Sago.Framework.Universal.TemplateControls.CarouselControl.csproj", "{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sago.Framework.Universal.TemplateControls.ToggleButton", "..\..\..\Framework\Framework\Sago.Framework.Universal.TemplateControls.ToggleButton\Sago.Framework.Universal.TemplateControls.ToggleButton.csproj", "{82FC345A-0E2D-4153-81DD-6AF9BC6E9331}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sago.Framework.Universal.TemplateControls.MediaPlayer", "..\..\..\..\..\Sago.VisualStudio.com\Windows 10\Framework\Framework\Sago.Framework.Universal.TemplateControls.MediaPlayer\Sago.Framework.Universal.TemplateControls.MediaPlayer.csproj", "{C041B2AE-6078-4E3C-8CFE-0BC485AE269E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sago.Framework.Universal.TemplateControls.CarouselControl", "..\..\..\Framework\Framework\Sago.Framework.Universal.TemplateControls.CarouselControl\Sago.Framework.Universal.TemplateControls.CarouselControl.csproj", "{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sago.Framework.Universal.TemplateControls.ToggleButton", "..\..\..\..\..\Sago.VisualStudio.com\Windows 10\Framework\Framework\Sago.Framework.Universal.TemplateControls.ToggleButton\Sago.Framework.Universal.TemplateControls.ToggleButton.csproj", "{82FC345A-0E2D-4153-81DD-6AF9BC6E9331}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sago.Framework.Universal.Library.Common", "..\..\..\Framework\Framework\Sago.Framework.Universal.Library.Common\Sago.Framework.Universal.Library.Common.csproj", "{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sago.Framework.Universal.TemplateControls.EdgeTappedListView", "..\..\..\Framework\Framework\Sago.Framework.Universal.TemplateControls.EdgeTappedListView\Sago.Framework.Universal.TemplateControls.EdgeTappedListView.csproj", "{37EEE4C8-10B2-4952-9B5A-B40DB7D27719}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,38 +85,6 @@ Global
 		{5AB1E4AC-C4E4-4E7F-A5DD-C7EAEFC4EA74}.Release|x64.Build.0 = Release|x64
 		{5AB1E4AC-C4E4-4E7F-A5DD-C7EAEFC4EA74}.Release|x86.ActiveCfg = Release|x86
 		{5AB1E4AC-C4E4-4E7F-A5DD-C7EAEFC4EA74}.Release|x86.Build.0 = Release|x86
-		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Debug|ARM.ActiveCfg = Debug|ARM
-		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Debug|ARM.Build.0 = Debug|ARM
-		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Debug|x64.ActiveCfg = Debug|x64
-		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Debug|x64.Build.0 = Debug|x64
-		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Debug|x86.ActiveCfg = Debug|x86
-		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Debug|x86.Build.0 = Debug|x86
-		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Release|ARM.ActiveCfg = Release|ARM
-		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Release|ARM.Build.0 = Release|ARM
-		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Release|x64.ActiveCfg = Release|x64
-		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Release|x64.Build.0 = Release|x64
-		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Release|x86.ActiveCfg = Release|x86
-		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Release|x86.Build.0 = Release|x86
-		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Debug|ARM.ActiveCfg = Debug|ARM
-		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Debug|ARM.Build.0 = Debug|ARM
-		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Debug|x64.ActiveCfg = Debug|x64
-		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Debug|x64.Build.0 = Debug|x64
-		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Debug|x86.ActiveCfg = Debug|x86
-		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Debug|x86.Build.0 = Debug|x86
-		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Release|ARM.ActiveCfg = Release|ARM
-		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Release|ARM.Build.0 = Release|ARM
-		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Release|x64.ActiveCfg = Release|x64
-		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Release|x64.Build.0 = Release|x64
-		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Release|x86.ActiveCfg = Release|x86
-		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Release|x86.Build.0 = Release|x86
 		{C041B2AE-6078-4E3C-8CFE-0BC485AE269E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C041B2AE-6078-4E3C-8CFE-0BC485AE269E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C041B2AE-6078-4E3C-8CFE-0BC485AE269E}.Debug|ARM.ActiveCfg = Debug|ARM
@@ -147,13 +117,96 @@ Global
 		{82FC345A-0E2D-4153-81DD-6AF9BC6E9331}.Release|x64.Build.0 = Release|x64
 		{82FC345A-0E2D-4153-81DD-6AF9BC6E9331}.Release|x86.ActiveCfg = Release|x86
 		{82FC345A-0E2D-4153-81DD-6AF9BC6E9331}.Release|x86.Build.0 = Release|x86
+		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Debug|ARM.ActiveCfg = Debug|ARM
+		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Debug|ARM.Build.0 = Debug|ARM
+		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Debug|x64.ActiveCfg = Debug|x64
+		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Debug|x64.Build.0 = Debug|x64
+		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Debug|x86.ActiveCfg = Debug|x86
+		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Debug|x86.Build.0 = Debug|x86
+		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Release|ARM.ActiveCfg = Release|ARM
+		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Release|ARM.Build.0 = Release|ARM
+		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Release|x64.ActiveCfg = Release|x64
+		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Release|x64.Build.0 = Release|x64
+		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Release|x86.ActiveCfg = Release|x86
+		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4}.Release|x86.Build.0 = Release|x86
+		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Debug|ARM.ActiveCfg = Debug|ARM
+		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Debug|ARM.Build.0 = Debug|ARM
+		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Debug|x64.ActiveCfg = Debug|x64
+		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Debug|x64.Build.0 = Debug|x64
+		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Debug|x86.ActiveCfg = Debug|x86
+		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Debug|x86.Build.0 = Debug|x86
+		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Release|ARM.ActiveCfg = Release|ARM
+		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Release|ARM.Build.0 = Release|ARM
+		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Release|x64.ActiveCfg = Release|x64
+		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Release|x64.Build.0 = Release|x64
+		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Release|x86.ActiveCfg = Release|x86
+		{39D7511A-CC82-40E5-8D11-0E69A5AF59B0}.Release|x86.Build.0 = Release|x86
+		{37EEE4C8-10B2-4952-9B5A-B40DB7D27719}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37EEE4C8-10B2-4952-9B5A-B40DB7D27719}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37EEE4C8-10B2-4952-9B5A-B40DB7D27719}.Debug|ARM.ActiveCfg = Debug|ARM
+		{37EEE4C8-10B2-4952-9B5A-B40DB7D27719}.Debug|ARM.Build.0 = Debug|ARM
+		{37EEE4C8-10B2-4952-9B5A-B40DB7D27719}.Debug|x64.ActiveCfg = Debug|x64
+		{37EEE4C8-10B2-4952-9B5A-B40DB7D27719}.Debug|x64.Build.0 = Debug|x64
+		{37EEE4C8-10B2-4952-9B5A-B40DB7D27719}.Debug|x86.ActiveCfg = Debug|x86
+		{37EEE4C8-10B2-4952-9B5A-B40DB7D27719}.Debug|x86.Build.0 = Debug|x86
+		{37EEE4C8-10B2-4952-9B5A-B40DB7D27719}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37EEE4C8-10B2-4952-9B5A-B40DB7D27719}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37EEE4C8-10B2-4952-9B5A-B40DB7D27719}.Release|ARM.ActiveCfg = Release|ARM
+		{37EEE4C8-10B2-4952-9B5A-B40DB7D27719}.Release|ARM.Build.0 = Release|ARM
+		{37EEE4C8-10B2-4952-9B5A-B40DB7D27719}.Release|x64.ActiveCfg = Release|x64
+		{37EEE4C8-10B2-4952-9B5A-B40DB7D27719}.Release|x64.Build.0 = Release|x64
+		{37EEE4C8-10B2-4952-9B5A-B40DB7D27719}.Release|x86.ActiveCfg = Release|x86
+		{37EEE4C8-10B2-4952-9B5A-B40DB7D27719}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4} = {0F562D33-661F-4CC3-AB4A-6ADC57464FC3}
 		{C041B2AE-6078-4E3C-8CFE-0BC485AE269E} = {0F562D33-661F-4CC3-AB4A-6ADC57464FC3}
 		{82FC345A-0E2D-4153-81DD-6AF9BC6E9331} = {0F562D33-661F-4CC3-AB4A-6ADC57464FC3}
+		{23274C99-EAC8-4EC0-A2F0-3F1253239DF4} = {0F562D33-661F-4CC3-AB4A-6ADC57464FC3}
+		{37EEE4C8-10B2-4952-9B5A-B40DB7D27719} = {0F562D33-661F-4CC3-AB4A-6ADC57464FC3}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://sago.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = GeekSchool\\GeekSchool.csproj
+		SccProjectName1 = GeekSchool
+		SccLocalPath1 = GeekSchool
+		SccProjectUniqueName2 = GeekSchool.Entity\\GeekSchool.Entity.csproj
+		SccProjectName2 = GeekSchool.Entity
+		SccLocalPath2 = GeekSchool.Entity
+		SccProjectUniqueName3 = GeekSchool.Service\\GeekSchool.Service.csproj
+		SccProjectName3 = GeekSchool.Service
+		SccLocalPath3 = GeekSchool.Service
+		SccProjectUniqueName4 = ..\\..\\..\\Framework\\Framework\\Sago.Framework.Universal.TemplateControls.MediaPlayer\\Sago.Framework.Universal.TemplateControls.MediaPlayer.csproj
+		SccProjectTopLevelParentUniqueName4 = GeekSchool.sln
+		SccProjectName4 = ../../../Framework/Framework/Sago.Framework.Universal.TemplateControls.MediaPlayer
+		SccLocalPath4 = ..\\..\\..\\Framework\\Framework\\Sago.Framework.Universal.TemplateControls.MediaPlayer
+		SccProjectUniqueName5 = ..\\..\\..\\Framework\\Framework\\Sago.Framework.Universal.TemplateControls.ToggleButton\\Sago.Framework.Universal.TemplateControls.ToggleButton.csproj
+		SccProjectTopLevelParentUniqueName5 = GeekSchool.sln
+		SccProjectName5 = ../../../Framework/Framework/Sago.Framework.Universal.TemplateControls.ToggleButton
+		SccLocalPath5 = ..\\..\\..\\Framework\\Framework\\Sago.Framework.Universal.TemplateControls.ToggleButton
+		SccProjectUniqueName6 = ..\\..\\..\\Framework\\Framework\\Sago.Framework.Universal.TemplateControls.CarouselControl\\Sago.Framework.Universal.TemplateControls.CarouselControl.csproj
+		SccProjectTopLevelParentUniqueName6 = GeekSchool.sln
+		SccProjectName6 = ../../../Framework/Framework/Sago.Framework.Universal.TemplateControls.CarouselControl
+		SccLocalPath6 = ..\\..\\..\\Framework\\Framework\\Sago.Framework.Universal.TemplateControls.CarouselControl
+		SccProjectUniqueName7 = ..\\..\\..\\Framework\\Framework\\Sago.Framework.Universal.Library.Common\\Sago.Framework.Universal.Library.Common.csproj
+		SccProjectName7 = ../../../Framework/Framework/Sago.Framework.Universal.Library.Common
+		SccLocalPath7 = ..\\..\\..\\Framework\\Framework\\Sago.Framework.Universal.Library.Common
+		SccProjectUniqueName8 = ..\\..\\..\\Framework\\Framework\\Sago.Framework.Universal.TemplateControls.EdgeTappedListView\\Sago.Framework.Universal.TemplateControls.EdgeTappedListView.csproj
+		SccProjectTopLevelParentUniqueName8 = GeekSchool.sln
+		SccProjectName8 = ../../../Framework/Framework/Sago.Framework.Universal.TemplateControls.EdgeTappedListView
+		SccLocalPath8 = ..\\..\\..\\Framework\\Framework\\Sago.Framework.Universal.TemplateControls.EdgeTappedListView
 	EndGlobalSection
 EndGlobal
